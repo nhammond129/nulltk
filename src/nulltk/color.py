@@ -48,7 +48,8 @@ class Color:
     @classmethod
     def from_hex(self, hexstring: str):
         hexstring = hexstring.replace('#','')
-        assert (len(hexstring) == 6)
+        if len(hexstring) != 6:
+            raise Exception(f"Tried to get color from hex string of invalid length: '{hexstring}'")
         return Color(*[int(hexstring[i : i+2], 16) for i in range(0, len(hexstring), 2)])
 
     @classmethod
