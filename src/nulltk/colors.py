@@ -1,4 +1,4 @@
-from colors import Color
+from .color import Color
 
 Crimson                 = Color(220, 20, 60)
 DarkRed		            = Color(139, 0, 0)

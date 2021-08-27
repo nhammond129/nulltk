@@ -1,5 +1,5 @@
 import tkinter as tk
-import colors
+from . import colors
 
 def make_reactive(obj, activebg, activefg):
     obj.prevBG = obj['background']

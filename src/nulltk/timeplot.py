@@ -1,5 +1,5 @@
 import tkinter as tk
-from .colors import Color
+from .color import Color
 
 class TimePlot(tk.Canvas):
     def __init__(self, *args, width=128, height=64, min=0, max=100, label=None, **kwargs):

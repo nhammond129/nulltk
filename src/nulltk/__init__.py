@@ -7,3 +7,4 @@ from .overlaywindow import OverlayWindow
 from .input import Slider, Dial
 from .timeplot import TimePlot
 from .style import style, make_reactive
+from .color import Color

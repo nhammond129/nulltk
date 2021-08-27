@@ -1,5 +1,5 @@
 import tkinter as tk
-from .colors import Color
+from .color import Color
 
 class TabbedFrame(tk.Frame):
     def __init__(self, *args, tabs: list, **kwargs):

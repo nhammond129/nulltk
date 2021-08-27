@@ -1,6 +1,6 @@
 import tkinter as tk
 import math
-from .colors import Color
+from .color import Color
 
 class Slider(tk.Canvas):
     def __init__(self, *args, width=16, height=128, min=0, max=100, value=None, step=1, arc_width=None, **kwargs):
