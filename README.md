@@ -1,5 +1,14 @@
-Install
---------
+nulltk
+----
+`nulltk` is a wrapper for tkinter that extends base functionality for more ease of use.
 ```
-python -m pip install --upgrade --index-url https://test.pypi.org/simple/ --no-deps nulltk-nhammond129
+pip install nulltk-nhammond129
 ```
+
+Dependencies
+----
+`nulltk` supports Python 3, and used modules are listed in [`requirements.txt`](requirements.txt).
+
+Example Usage
+----
+See [`examples/`](examples) for usage.
