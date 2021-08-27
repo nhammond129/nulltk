@@ -5,8 +5,12 @@ class TabbedFrame(tk.Frame):
     def __init__(self, *args, tabs: list, **kwargs):
         tk.Frame.__init__(self, *args, **kwargs)
 
-        self.fg_color = Color.from_hex(self.option_get('foreground','Foreground'))
-        self.bg_color = Color.from_hex(self.option_get('background','Background'))
+        fg_hex = self.option_get('foreground','Foreground')
+        bg_hex = self.option_get('background','Background')
+        if fg_hex == '': fg_hex = '#000000'
+        if bg_hex == '': bg_hex = '#ffffff'
+        self.fg_color = Color.from_hex(fg_hex)
+        self.bg_color = Color.from_hex(bg_hex)
 
         topbar = tk.Frame(self)
         self.elements = {}
