@@ -25,7 +25,6 @@ class Style:
         root.option_add("*activeBackground", self.backgroundActive.as_hex())
         root.option_add("*activeForeground", self.foregroundActive.as_hex())
         root.option_add("*insertBackground", self.backgroundActive.as_hex())
-        root.option_add("*borderWidth", self..as_hex())
-        root.option_add("*borderWidth", self..as_hex())
+        root.option_add("*borderWidth", self.borderWidth)
         root.option_add("*Canvas*highlightThickness", self.canvasHighlightBorder)
         # Canvas defaulting to non-zero 
