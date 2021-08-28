@@ -1,6 +1,7 @@
 nulltk
 ----
-`nulltk` is a wrapper for tkinter that extends base functionality for more ease of use.
+`nulltk` is a wrapper for tkinter that extends its base functionality.
+Namely to provide some more widgets based on the original set and improve ease of styling.
 ```
 pip install --upgrade nulltk-nhammond129
 ```
