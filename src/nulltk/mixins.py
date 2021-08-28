@@ -1,6 +1,8 @@
 import tkinter as tk
 
 def Reactive(obj):
+	activebg = obj['activeBackground']
+	activefg = obj['activeForeground']
     obj.prevBG = obj['background']
     try:
         obj.prevFG = obj['foreground']
