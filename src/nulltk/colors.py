@@ -9,6 +9,7 @@ LightCoral				= Color(240, 128, 128)
 LightSalmon				= Color(255, 160, 122)
 Red						= Color(255, 0, 0)
 Salmon					= Color(250, 128, 114)
+
 # Pinks
 DeepPink				= Color(255, 20, 147)
 HotPink					= Color(255, 105, 180)
@@ -16,6 +17,7 @@ LightPink				= Color(255, 182, 193)
 MediumVioletRed			= Color(199, 21, 133)
 PaleVioletRed			= Color(219, 112, 147)
 Pink					= Color(255, 192, 203)
+
 # Oranges
 Coral					= Color(255, 127, 80)
 DarkOrange				= Color(255, 140, 0)
@@ -23,6 +25,7 @@ LightSalmon				= Color(255, 160, 122)
 Orange					= Color(255, 165, 0)
 OrangeRed				= Color(255, 69, 0)
 Tomato					= Color(255, 99, 71)
+
 # Yellows
 DarkKhaki				= Color(189, 183, 107)
 Gold					= Color(255, 215, 0)
@@ -35,6 +38,7 @@ PaleGoldenrod			= Color(238, 232, 170)
 PapayaWhip				= Color(255, 239, 213)
 PeachPuff				= Color(255, 218, 185)
 Yellow					= Color(255, 255, 0)
+
 # Purples
 BlueViolet				= Color(138, 43, 226)
 DarkMagenta				= Color(139, 0, 139)
@@ -55,6 +59,7 @@ RebeccaPurple			= Color(102, 51, 153)
 SlateBlue				= Color(106, 90, 205)
 Thistle					= Color(216, 191, 216)
 Violet					= Color(238, 130, 238)
+
 # Greens
 Chartreuse				= Color(127, 255, 0)
 DarkCyan				= Color(0, 139, 139)
@@ -79,6 +84,7 @@ SeaGreen				= Color(46, 139, 87)
 SpringGreen				= Color(0, 255, 127)
 Teal					= Color(0, 128, 128)
 YellowGreen				= Color(154, 205, 50)
+
 # Blues
 Aqua					= Color(0, 255, 255)
 Aquamarine				= Color(127, 255, 212)
@@ -105,6 +111,7 @@ RoyalBlue				= Color(65, 105, 225)
 SkyBlue					= Color(135, 206, 235)
 SteelBlue				= Color(70, 130, 180)
 Turquoise				= Color(64, 224, 208)
+
 # Browns
 Bisque					= Color(255, 228, 196)
 BlanchedAlmond			= Color(255, 235, 205)
@@ -123,6 +130,7 @@ SandyBrown				= Color(244, 164, 96)
 Sienna					= Color(160, 82, 45)
 Tan						= Color(210, 180, 140)
 Wheat					= Color(245, 222, 179)
+
 # Whites
 AliceBlue				= Color(240, 248, 255)
 AntiqueWhite			= Color(250, 235, 215)
@@ -141,6 +149,7 @@ SeaShell				= Color(255, 245, 238)
 Snow					= Color(255, 250, 250)
 White					= Color(255, 255, 255)
 WhiteSmoke				= Color(245, 245, 245)
+
 # Grays
 Black					= Color(0, 0, 0)
 DarkGray				= Color(169, 169, 169)
@@ -152,6 +161,7 @@ LightGray				= Color(211, 211, 211)
 LightSlateGray			= Color(119, 136, 153)
 Silver					= Color(192, 192, 192)
 SlateGray				= Color(112, 128, 144)
+
 # Greys
 DarkGrey				= DarkGray
 DarkSlateGrey			= DarkSlateGray
