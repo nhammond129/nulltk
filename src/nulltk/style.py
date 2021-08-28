@@ -14,7 +14,7 @@ class Style:
 	foregroundActive:		Color = Color.from_hex('#7d7a68')
 	colorInteractive:		Color = Color.from_hex('#60ac39')
 	borderWidth:			int = 0
-	canvasHighlightBorder:	int = 0
+	highlightBorderWidth:	int = 0
 	relief:					str = tk.FLAT
 	# font -> Droid Sans Mono 14?
 
@@ -25,5 +25,5 @@ class Style:
 		root.option_add("*activeForeground", self.foregroundActive.as_hex())
 		root.option_add("*insertBackground", self.backgroundActive.as_hex())
 		root.option_add("*borderWidth", self.borderWidth)
-		root.option_add("*Canvas*highlightThickness", self.canvasHighlightBorder)
+		root.option_add("*highlightThickness", self.highlightBorderWidth)
 		# Canvas defaulting to non-zero
