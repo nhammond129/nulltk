@@ -1,47 +1,31 @@
 import tkinter as tk
 from . import colors
+from .color import Color
 
-def make_reactive(obj, activebg, activefg):
-    obj.prevBG = obj['background']
-    try:
-        obj.prevFG = obj['foreground']
-    except tk.TclError: pass
+from dataclasses import dataclass
 
-    def on_enter(e):
-        obj.prevBG = obj['background']
-        obj['background'] = activebg
-        if hasattr(obj,'prevFG'):
-            obj.prevFG = obj['foreground']
-            obj['foreground'] = activefg
+@dataclass
+class Style:
+    # Defaults from atelierdune.dark:
+    # https://terminal.sexy/#ICAdpqKMICAd1zc3YKw5z7AXZoThuFTUH62DpqKMfXpo1zc3YKw5z7AXZoThuFTUH62D_vvs
+    background:             Color = Color.from_hex('#20201d')
+    foreground:             Color = Color.from_hex('#a6a28c')
+    backgroundActive:       Color = Color.from_hex('#20201d')
+    foregroundActive:       Color = Color.from_hex('#7d7a68')
+    colorInteractive:       Color = Color.from_hex('#60ac39')
+    borderWidth:            int = 0
+    canvasHighlightBorder:  int = 0
+    relief: str = tk.FLAT
 
-    def on_leave(e):
-        obj['background'] = obj.prevBG
-        if hasattr(obj,'prevFG'):
-            obj['foreground'] = obj.prevFG
+    # font -> Droid Sans Mono 14?
 
-    obj.bind("<Enter>", on_enter)
-    obj.bind("<Leave>", on_leave)
-
-def style(widget, **kwargs):
-
-    bg=colors.DarkGray.darker().darker()
-    fg=colors.Aquamarine
-    activebg=colors.DarkGray.darker()
-    activefg=fg.lighter()
-    bd=0
-    highlightthickness=0
-    insertbackground=colors.White
-
-    widget.option_add("*background", bg.as_hex())
-    widget.option_add("*foreground", fg.as_hex())
-    widget.option_add("*activeBackground", activebg.as_hex())
-    widget.option_add("*activeForeground", activefg.as_hex())
-    widget.option_add("*insertBackground", insertbackground.as_hex())
-    widget.option_add("*borderWidth", bd)
-    widget.option_add("*Canvas*highlightThickness", highlightthickness)
-    widget.option_add("*relief", tk.FLAT)
-
-    if widget.__class__.__name__ in ('Button','Label',):
-        make_reactive(widget, activebg, activefg)
-    
-    for child in widget.children.values(): style(child)
+    def apply(self, root):
+        root.option_add("*background", self.background.as_hex())
+        root.option_add("*foreground", self.foreground.as_hex())
+        root.option_add("*activeBackground", self.backgroundActive.as_hex())
+        root.option_add("*activeForeground", self.foregroundActive.as_hex())
+        root.option_add("*insertBackground", self.backgroundActive.as_hex())
+        root.option_add("*borderWidth", self..as_hex())
+        root.option_add("*borderWidth", self..as_hex())
+        root.option_add("*Canvas*highlightThickness", self.canvasHighlightBorder)
+        # Canvas defaulting to non-zero 
