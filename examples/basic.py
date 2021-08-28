@@ -6,9 +6,9 @@ def main():
 	tabbed = tk.TabbedFrame(root, tabs=("Tab one", "Tab two", "Tab three"))
 	tabbed.pack()
 
-	tk.Label(tabbed.tab_frame(0), text="This is the contents of tab one.").pack()
-	tk.Label(tabbed.tab_frame(1), text="This is the contents of tab two.").pack()
-	tk.Label(tabbed.tab_frame(2), text="This is the contents of tab three.").pack()
+	tk.Label(tabbed.tab_frame(0), text="Contents of tab one.").pack()
+	tk.Label(tabbed.tab_frame(1), text="Contents of tab two.").pack()
+	tk.Label(tabbed.tab_frame(2), text="Contents of tab three.").pack()
 
 	root.mainloop()
 
