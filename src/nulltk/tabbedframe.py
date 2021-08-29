@@ -3,7 +3,7 @@ from .color import Color
 from .mixins import Reactive
 
 class TabbedFrame(tk.Frame):
-	def __init__(self, *args, tabs: list, allow_tab_creation=False, **kwargs):
+	def __init__(self, *args, tabs=tuple(), allow_tab_creation=False, **kwargs):
 		tk.Frame.__init__(self, *args, **kwargs)
 		self.fg_color = Color.from_hex(self.option_get('foreground','Foreground'))
 		self.bg_color = Color.from_hex(self.option_get('background','Background'))
@@ -63,6 +63,8 @@ class TabbedFrame(tk.Frame):
 
 		if len(self._tabs) == 1:
 			self._on_button(tuple(self._tabs.keys())[0])
+		
+		return self._tabs[tabname][0]
 
 	def tab_frames(self):
 		return [t[0] for t in self._tabs.values()]
