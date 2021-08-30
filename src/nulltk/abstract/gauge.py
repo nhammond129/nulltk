@@ -2,13 +2,14 @@ from PIL import ImageFont
 import tkinter as tk
 
 class Gauge:
+	drawresolution = 3
 	def __init__(self,
 		amountused: float = 0,
 		amounttotal: float = 100,
 		showvalue: bool = True,
-		valuefont: ImageFont = ImageFont.truetype('arialbd.ttf', 40 * 5),
-		unitsfont: ImageFont = ImageFont.truetype('arialbd.ttf', 15 * 5),
-		labelfont: ImageFont = ImageFont.truetype('arialbd.ttf', 20 * 5),
+		valuefont: ImageFont = ImageFont.truetype('arialbd.ttf', 40 * drawresolution),
+		unitsfont: ImageFont = ImageFont.truetype('arialbd.ttf', 15 * drawresolution),
+		labelfont: ImageFont = ImageFont.truetype('arialbd.ttf', 20 * drawresolution),
 		unitstext: str = '',
 		labeltext: str = '',
 		metersize: int = 200,
