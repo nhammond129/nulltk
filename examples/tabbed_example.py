@@ -1,6 +1,3 @@
-import sys
-print(sys.path)
-
 import nulltk as tk
 
 def main():
