@@ -1,4 +1,3 @@
-from typing import Text
 import nulltk as tk
 
 def main():

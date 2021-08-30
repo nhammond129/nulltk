@@ -1,7 +1,7 @@
 # include default tkinter symbols
 from tkinter import *
 
-# inheriting widgets
+# widgets
 from .tkroot import Tk
 from .floatingwindow import FloatingWindow
 from .graph import Graph
@@ -11,6 +11,7 @@ from .overlaywindow import OverlayWindow
 from .input import Slider, Dial
 from .timeplot import TimePlot
 from .text import Text
+from .radialgauge import RadialGauge
 
 # appliers
 from .mixins import Reactive
