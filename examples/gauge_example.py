@@ -1,5 +1,6 @@
 import nulltk as tk
 import nulltk.colors as colors
+import random
 
 def main():
 	root = tk.Tk()
@@ -11,16 +12,19 @@ def main():
 		meter.step()
 		meter.after(20, test, meter)
 
-	gauge = tk.RadialGauge(root,
-			unitstext='units', labeltext='label text',
-			stripethickness=2,
-			amounttotal=60,
-			arcoffset=-90,
-			arcrange=360
-		)
-	gauge.pack(fill=tk.BOTH, expand=True)
+	def make_gauge(root, **kwargs):
+		gauge = tk.RadialGauge(root,
+				unitstext='units', labeltext='label text',
+				stripethickness=2,
+				**kwargs
+			)
+		gauge.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+		return gauge
 
-	test(gauge)
+	for i in range(1):
+		g=make_gauge(root)
+		g.amountused = random.randint(1,100)
+		test(g)
 
 	root.mainloop()
 
