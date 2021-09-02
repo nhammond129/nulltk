@@ -1,5 +1,19 @@
 from PIL import ImageFont
 import tkinter as tk
+from ..util import font
+
+# determine if we can use 'arialbd' as a default font:
+DEFAULT_FONTS = [
+	'arialbd.ttf',
+	'DroidSansMono.ttf',
+]
+DEFAULT_FONTS.extend(font.find_system_fonts())
+for font in DEFAULT_FONTS:
+	default_font = font
+	try:
+		ImageFont.truetype(default_font, 14)
+		break
+	except OSError: continue
 
 class Gauge:
 	drawresolution = 3
@@ -7,9 +21,9 @@ class Gauge:
 		amountused: float = 0,
 		amounttotal: float = 100,
 		showvalue: bool = True,
-		valuefont: ImageFont = ImageFont.truetype('arialbd.ttf', 40 * drawresolution),
-		unitsfont: ImageFont = ImageFont.truetype('arialbd.ttf', 15 * drawresolution),
-		labelfont: ImageFont = ImageFont.truetype('arialbd.ttf', 20 * drawresolution),
+		valuefont: ImageFont = ImageFont.truetype(default_font, 40 * drawresolution),
+		unitsfont: ImageFont = ImageFont.truetype(default_font, 15 * drawresolution),
+		labelfont: ImageFont = ImageFont.truetype(default_font, 20 * drawresolution),
 		unitstext: str = '',
 		labeltext: str = '',
 		metersize: int = 200,
@@ -32,7 +46,7 @@ class Gauge:
 		self.unitstext = unitstext
 		self.labeltext = labeltext
 		self.wedgesize = wedgesize
-	
+
 	def draw_meter(self, *args):
 		raise Exception("Not yet implemented.")
 
