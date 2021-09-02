@@ -22,7 +22,7 @@ def get_filling_font(font: ImageFont.FreeTypeFont, text: str, area: tuple):
 	print(fw, fh)
 	return font
 
-
+# https://github.com/python-pillow/Pillow/blob/master/src/PIL/ImageFont.py#L861-L895
 def find_system_fonts():
 	dirs = []
 	fonts = []
