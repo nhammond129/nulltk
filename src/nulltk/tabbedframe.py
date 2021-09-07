@@ -69,8 +69,8 @@ class TabbedFrame(tk.Frame):
 	def tab_frames(self):
 		return [t[0] for t in self._tabs.values()]
 
-	def tab_frame(self, index):
-		return self.tab_frames()[index]
+	def tab_frame(self, tabname: str):
+		return self._tabs[tabname][0]
 
 	def tabs(self):
 		return [t for t in self._tabs.keys()]

@@ -6,17 +6,17 @@ def main():
 	tabbed_main = tk.TabbedFrame(root, tabs=("Static tabs", "Dynamic tabs"))
 	tabbed_main.pack(fill=tk.BOTH, expand=True)
 
-	tabbed_sub1 = tk.TabbedFrame(tabbed_main.tab_frame(0), tabs=("one", "two"))
+	tabbed_sub1 = tk.TabbedFrame(tabbed_main.tab_frames()[0], tabs=("one", "two"))
 	tabbed_sub1.pack(fill=tk.BOTH, expand=True)
 
-	tabbed_sub2 = tk.TabbedFrame(tabbed_main.tab_frame(1), tabs=("one", "two"), allow_tab_creation=True)
+	tabbed_sub2 = tk.TabbedFrame(tabbed_main.tab_frames()[1], tabs=("one", "two"), allow_tab_creation=True)
 	tabbed_sub2.pack(fill=tk.BOTH, expand=True)
 
-	tk.Label(tabbed_sub1.tab_frame(0), text="Contents of tab one.", padx=40, pady=40).pack(fill=tk.BOTH, expand=True)
-	tk.Label(tabbed_sub1.tab_frame(1), text="Contents of tab two.", padx=40, pady=40).pack(fill=tk.BOTH, expand=True)
+	tk.Label(tabbed_sub1.tab_frames()[0], text="Contents of tab one.", padx=40, pady=40).pack(fill=tk.BOTH, expand=True)
+	tk.Label(tabbed_sub1.tab_frames()[1], text="Contents of tab two.", padx=40, pady=40).pack(fill=tk.BOTH, expand=True)
 
-	tk.Label(tabbed_sub2.tab_frame(0), text="Contents of tab one.", padx=40, pady=40).pack(fill=tk.BOTH, expand=True)
-	tk.Label(tabbed_sub2.tab_frame(1), text="Contents of tab two.", padx=40, pady=40).pack(fill=tk.BOTH, expand=True)
+	tk.Label(tabbed_sub2.tab_frames()[0], text="Contents of tab one.", padx=40, pady=40).pack(fill=tk.BOTH, expand=True)
+	tk.Label(tabbed_sub2.tab_frames()[1], text="Contents of tab two.", padx=40, pady=40).pack(fill=tk.BOTH, expand=True)
 
 	root.mainloop()
 
