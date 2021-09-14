@@ -74,7 +74,6 @@ class Text(tk.Text):
         self._line_numbers.redraw()
         
         # check if we need to show/hide v. scrollbar (self._vsb)
-        print(self.cget('height'), int(self.index('end-1c').split('.')[0]))
         if self.cget('height') > int(self.index('end-1c').split('.')[0]):
             self._vsb.pack_forget()
         else:
