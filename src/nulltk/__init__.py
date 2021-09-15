@@ -1,7 +1,7 @@
 # include default tkinter symbols
 from tkinter import *
 
-# widgets
+# extended & added widgets
 from .tkroot import Tk
 from .floatingwindow import FloatingWindow
 from .graph import Graph
