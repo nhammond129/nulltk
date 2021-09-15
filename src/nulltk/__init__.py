@@ -10,7 +10,7 @@ from .tabbedframe import TabbedFrame
 from .overlaywindow import OverlayWindow
 from .input import Slider, Dial
 from .timeplot import TimePlot
-from .text import Text
+from .textnumbered import TextNumbered
 from .radialgauge import RadialGauge
 
 # appliers
