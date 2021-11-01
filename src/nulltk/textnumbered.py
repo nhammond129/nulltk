@@ -6,7 +6,7 @@ from .color import Color
 #    https://stackoverflow.com/questions/16369470/tkinter-adding-line-number-to-text-widget
 #    https://stackoverflow.com/questions/65228477/text-doesnt-contain-any-characters-tagged-with-sel-tkinter
 
-class TextLineNumbers(tk.Canvas):
+class LineNumbersColumn(tk.Canvas):
     def __init__(self, *args, **kwargs):
         tk.Canvas.__init__(self, *args, **kwargs)
         self.textwidget = None
@@ -33,7 +33,7 @@ class TextLineNumbers(tk.Canvas):
             i = self.textwidget.index("%s+1line" % i)
         self.config(width=max_width)
 
-class Text(tk.Text):
+class TextNumbered(tk.Text):
     def __init__(self, master, *args,
             wrap=tk.NONE, tab_width=4,
             line_numbers=True, gutter_size=8,
@@ -47,7 +47,7 @@ class Text(tk.Text):
             wrap=wrap, undo=undo, maxundo=maxundo,
             autoseparators=autoseparators, **kwargs)
 
-        self._line_numbers = TextLineNumbers(self._frame, width=0)
+        self._line_numbers = LineNumbersColumn(self._frame, width=0)
         if line_numbers:
             self._line_numbers.attach(self)
 

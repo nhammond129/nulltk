@@ -1,7 +1,7 @@
 # include default tkinter symbols
 from tkinter import *
 
-# widgets
+# extended & added widgets
 from .tkroot import Tk
 from .floatingwindow import FloatingWindow
 from .graph import Graph
@@ -10,7 +10,7 @@ from .tabbedframe import TabbedFrame
 from .overlaywindow import OverlayWindow
 from .input import Slider, Dial
 from .timeplot import TimePlot
-from .text import Text
+from .textnumbered import TextNumbered
 from .radialgauge import RadialGauge
 
 # appliers
