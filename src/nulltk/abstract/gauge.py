@@ -1,4 +1,5 @@
 from PIL import ImageFont
+from typing import Type
 import tkinter as tk
 from ..util import font
 
@@ -8,8 +9,8 @@ DEFAULT_FONTS = [
     'DroidSansMono.ttf',
 ]
 DEFAULT_FONTS.extend(font.find_system_fonts())
-for font in DEFAULT_FONTS:
-    default_font = font
+for fnt in DEFAULT_FONTS:
+    default_font = fnt
     try:
         ImageFont.truetype(default_font, 14)
         break
@@ -21,9 +22,9 @@ class Gauge:
         amountused: float = 0,
         amounttotal: float = 100,
         showvalue: bool = True,
-        valuefont: ImageFont = ImageFont.truetype(default_font, 40 * drawresolution),
-        unitsfont: ImageFont = ImageFont.truetype(default_font, 15 * drawresolution),
-        labelfont: ImageFont = ImageFont.truetype(default_font, 20 * drawresolution),
+        valuefont: ImageFont.FreeTypeFont = ImageFont.truetype(default_font, 40 * drawresolution),
+        unitsfont: ImageFont.FreeTypeFont = ImageFont.truetype(default_font, 15 * drawresolution),
+        labelfont: ImageFont.FreeTypeFont = ImageFont.truetype(default_font, 20 * drawresolution),
         unitstext: str = '',
         labeltext: str = '',
         metersize: int = 200,
