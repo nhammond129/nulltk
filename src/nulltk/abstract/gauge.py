@@ -31,8 +31,8 @@ class Gauge:
         meterthickness: int = 10,
         stripethickness: int = 0):
 
-        self.amountusedvariable = tk.IntVar(value = amountused)
-        self.amounttotalvariable = tk.IntVar(value = amounttotal)
+        self.amountusedvariable = tk.IntVar(value = int(amountused))
+        self.amounttotalvariable = tk.IntVar(value = int(amounttotal))
 
         self.amountusedvariable.trace_add('write', self.draw_meter)
 

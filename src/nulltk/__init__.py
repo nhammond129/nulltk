@@ -5,7 +5,10 @@ from tkinter import *
 from .tkroot import Tk
 from .floatingwindow import FloatingWindow
 from .graph import Graph
-from .image import Image
+
+# intentional import override
+from .image import Image # type: ignore
+
 from .tabbedframe import TabbedFrame
 from .overlaywindow import OverlayWindow
 from .input import Slider, Dial

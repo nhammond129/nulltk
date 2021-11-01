@@ -1,8 +1,9 @@
 import tkinter as tk
 from .abstract.gauge import Gauge
 from .color import Color
+import PIL
 from PIL.ImageTk import PhotoImage
-from PIL import Image, ImageFont, ImageDraw
+from PIL import ImageFont, ImageDraw
 
 # styled after
 # https://github.com/israel-dryer/ttkbootstrap/issues/34#issuecomment-830833271
@@ -27,7 +28,7 @@ class RadialGauge(tk.Label, Gauge):
         return int((self.amountused / self.amounttotal) * self.arcrange + self.arcoffset)
 
     def _draw_base(self):
-        self.base_image = Image.new('RGBA', (self.metersize*self.drawresolution, self.metersize*self.drawresolution))
+        self.base_image = PIL.Image.new('RGBA', (self.metersize*self.drawresolution, self.metersize*self.drawresolution))
         draw = ImageDraw.Draw(self.base_image)
 
         # striped
@@ -56,7 +57,7 @@ class RadialGauge(tk.Label, Gauge):
         draw.text((self.metersize*self.drawresolution*0.5, self.metersize*self.drawresolution*0.5),
                   f"{self.labeltext}", anchor='ma', font=self.labelfont, fill=self.meterforeground.darker(0.25).as_hex())
 
-        self.meterimage = PhotoImage(im.resize((self.metersize, self.metersize), Image.CUBIC))
+        self.meterimage = PhotoImage(im.resize((self.metersize, self.metersize), PIL.Image.CUBIC))
         self.configure(image=self.meterimage)
 
     def _draw_meter_solid(self, draw):

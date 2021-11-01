@@ -1,6 +1,7 @@
 import tkinter as tk
 import math
 from .color import Color
+from typing import Callable
 
 class Slider(tk.Canvas):
     def __init__(self, *args, width=16, height=128, min=0, max=100, value=None, step=1, arc_width=None, **kwargs):
@@ -125,5 +126,5 @@ class Dial(tk.Canvas):
 
         for listener in self.listeners: listener(self.value)
 
-    def register_callback(self, cb: callable):
+    def register_callback(self, cb: Callable):
         self.listeners.append(cb)
